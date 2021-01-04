@@ -1,0 +1,39 @@
+.root {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    margin-bottom: 2rem;
+    input {
+        background-color: var(--primary);
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid var(--dark-bg);
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid var(--secondary);
+        }
+    }
+
+    button {
+        background-color: var(--dark-bg);
+        padding: 0.25rem;
+        border: none;
+        font-family: inherit;
+        font-size: inherit;
+        color: var(--white);
+        font-weight: 700;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+            background-color: var(--secondary);
+            color: var(--accent);
+        }
+        &:focus {
+            border: 1px solid var(--faded)
+        }
+
+    }
+}

@@ -1,0 +1,30 @@
+@import './scss/normalize.scss';
+
+:root {
+    --bg: #092f48;
+    --dark-bg: #07263A;
+    --primary: #0c3d5e;
+    --secondary: #0f4c75;
+    --accent: #ff006c;
+    --green: green;
+    --faded: #a4a4a4;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    color: var(--accent);
+    font-weight: 800;
+}

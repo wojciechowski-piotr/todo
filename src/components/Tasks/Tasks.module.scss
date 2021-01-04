@@ -1,0 +1,75 @@
+.root {
+    padding: 0;
+    list-style-type: none;
+    li {
+        display: grid;
+        grid-template-columns: auto 6fr auto;
+        background-color: var(--primary);
+        width: 100%;
+        padding: 0.5rem;
+        &:nth-child(odd) {
+            background-color: var(--secondary);
+        }
+        div {
+            display: flex;
+            align-items: center;
+        }
+        &.done {
+            background-color: var(--bg);
+        }
+    }
+    button {
+        background: none;
+        width: 30px;
+        height: 30px;
+        border: none;
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        cursor: pointer;
+        outline: none;
+        &:focus {
+            border: 1px solid var(--faded);
+            border-radius: 100%;
+        }
+        svg {
+            margin-top: 4px;
+        }
+    }
+}
+
+.mark {
+    background-color: var(--bg);
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    margin-right: 2rem;
+    border-radius: 100%;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--dark-bg);
+    }
+}
+
+.title {
+    &.done {
+        text-decoration: line-through;
+        color: var(--faded);
+    }
+}
+
+.remove {
+    justify-content: flex-end;
+    button {
+        width: 30px;
+        height: 30px;
+        svg {
+            color: var(--faded);
+        }
+        &:hover {
+            svg {
+                color: var(--white);
+            }
+        }
+    }
+}
