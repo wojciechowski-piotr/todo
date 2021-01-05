@@ -1,7 +1,8 @@
+@import '../../scss/mixins.scss';
+
 .root {
     display: grid;
-    grid-template-columns: 9fr 1fr;
-    margin-bottom: 2rem;
+    grid-template-columns: 4fr 1fr;
     input {
         background-color: var(--primary);
         padding: 0.5rem 1rem;
@@ -32,8 +33,24 @@
             color: var(--accent);
         }
         &:focus {
-            border: 1px solid var(--faded)
+            border: 1px solid var(--faded);
         }
-
+        &:disabled {
+            background-color: var(--dark-gray);
+            color: var(--faded);
+            &:hover {
+                color: var(--faded);
+            }
+        }
     }
+
+    @include screen('tablet') {
+        grid-template-columns: 9fr 1fr;
+    }
+}
+
+.warn {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: var(--accent);
 }
